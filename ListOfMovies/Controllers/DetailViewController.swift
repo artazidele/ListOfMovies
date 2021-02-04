@@ -16,6 +16,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var movieDirectorLabel: UILabel!
     
     @IBOutlet weak var movieTitleLabel: UILabel!
+    @IBOutlet weak var dayAndTime: UILabel!
     
     var movie: Movie!
     
@@ -28,8 +29,21 @@ class DetailViewController: UIViewController {
             movieYearLabel.text = movie.year
             movieDirectorLabel.text = movie.director
             movieTitleLabel.text = movie.title
+            dayAndTime.text = movie.session
         }
     }
+    @IBAction func addReminder(_ sender: Any) {
+        openReminders()
+    }
+    
+     func openReminders() {
+         if UIApplication.shared.canOpenURL(URL(string:"x-apple-reminderkit://")!) {
+             UIApplication.shared.open(URL(string: "x-apple-reminderkit://")!) { (success) in
+                 print("open: ", success)
+             }
+         }
+     }
+     
     
 
     /*

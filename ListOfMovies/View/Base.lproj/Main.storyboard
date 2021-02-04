@@ -110,18 +110,53 @@
                                     <constraint firstItem="Dpw-xZ-vAU" firstAttribute="trailing" secondItem="VpC-Cz-qzN" secondAttribute="trailingMargin" id="HL4-fW-SHp"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wWZ-R5-rSp">
+                                <rect key="frame" x="57" y="754" width="300" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="i2A-AK-vYG"/>
+                                </constraints>
+                                <state key="normal" title="Add Reminder"/>
+                                <connections>
+                                    <action selector="addReminder:" destination="bjM-ku-PgZ" eventType="touchUpInside" id="EHH-T8-31z"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next Session:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0c-Ps-eEj">
+                                <rect key="frame" x="57" y="670.5" width="104" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day and time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dst-cF-vWb">
+                                <rect key="frame" x="57" y="699" width="209" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Tyg-Bx-LKV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qQq-MH-Ias"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="qQq-MH-Ias" firstAttribute="trailing" secondItem="Dst-cF-vWb" secondAttribute="trailing" constant="148" id="6qT-We-R81"/>
+                            <constraint firstItem="qQq-MH-Ias" firstAttribute="bottom" secondItem="wWZ-R5-rSp" secondAttribute="bottom" constant="63" id="93R-PJ-V6t"/>
                             <constraint firstItem="VpC-Cz-qzN" firstAttribute="top" secondItem="qQq-MH-Ias" secondAttribute="top" constant="105" id="A4a-SM-G9l"/>
+                            <constraint firstItem="Dst-cF-vWb" firstAttribute="top" secondItem="H0c-Ps-eEj" secondAttribute="bottom" constant="8" symbolic="YES" id="A8z-iL-QJP"/>
                             <constraint firstItem="VpC-Cz-qzN" firstAttribute="centerX" secondItem="m7b-lp-kIu" secondAttribute="centerX" id="Gm2-E7-FpN"/>
                             <constraint firstItem="VpC-Cz-qzN" firstAttribute="leading" secondItem="qQq-MH-Ias" secondAttribute="leading" constant="57" id="PIW-P1-Cov"/>
+                            <constraint firstItem="wWZ-R5-rSp" firstAttribute="top" secondItem="Dst-cF-vWb" secondAttribute="bottom" constant="15" id="RNY-gD-U0N"/>
+                            <constraint firstItem="wWZ-R5-rSp" firstAttribute="trailing" secondItem="VpC-Cz-qzN" secondAttribute="trailing" id="aYE-6y-wAx"/>
+                            <constraint firstItem="qQq-MH-Ias" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="H0c-Ps-eEj" secondAttribute="trailing" symbolic="YES" id="dat-n4-M4A"/>
+                            <constraint firstItem="wWZ-R5-rSp" firstAttribute="leading" secondItem="VpC-Cz-qzN" secondAttribute="leading" id="gvx-gI-0uc"/>
+                            <constraint firstItem="Dst-cF-vWb" firstAttribute="leading" secondItem="H0c-Ps-eEj" secondAttribute="leading" id="hLu-B5-NzP"/>
                             <constraint firstItem="qQq-MH-Ias" firstAttribute="bottom" secondItem="VpC-Cz-qzN" secondAttribute="bottom" constant="230" id="hqs-YF-JoV"/>
+                            <constraint firstItem="Dst-cF-vWb" firstAttribute="leading" secondItem="wWZ-R5-rSp" secondAttribute="leading" id="shE-3R-R6T"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9Y8-hA-HRk"/>
                     <connections>
+                        <outlet property="dayAndTime" destination="Dst-cF-vWb" id="ZCy-w2-RTG"/>
                         <outlet property="movieDirectorLabel" destination="3sH-8o-fbr" id="QhD-UL-PVh"/>
                         <outlet property="movieImageView" destination="Dpw-xZ-vAU" id="aF9-dZ-RL5"/>
                         <outlet property="movieTitleLabel" destination="r7s-uq-z4a" id="8XB-IC-vdz"/>

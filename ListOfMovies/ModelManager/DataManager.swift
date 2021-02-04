@@ -37,4 +37,11 @@ class DataManager {
         "4",
         "5"
     ]
+    var session = [
+        "Friday 16.00",
+        "Saturday 12.00",
+        "Friday 20.00",
+        "Sunday 21.00",
+        "Saturday 15.00"
+    ]
 }
